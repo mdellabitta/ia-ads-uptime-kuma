@@ -34,4 +34,4 @@ jobs:
           [ "$VERSION" == "main" ] && VERSION=latest
           echo IMAGE_ID=$IMAGE_ID
           echo VERSION=$VERSION
-          docker buildx build . --platform linux/arm64,linux/amd64 --label "runnumber=${GITHUB_RUN_ID}" -t $IMAGE_NAME -t $IMAGE_ID:$VERSION --push
+          docker buildx build . --platform linux/arm64,linux/amd64 --label "runnumber=${GITHUB_RUN_ID}" -t $IMAGE_NAME -t $IMAGE_ID:$VERSION --output type=image,name=$IMAGE_ID:$VERSION,push=true
