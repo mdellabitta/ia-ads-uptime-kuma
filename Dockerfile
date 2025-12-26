@@ -16,6 +16,7 @@ COPY --from=BUILDER /litestream /usr/local/bin/litestream
 COPY litestream.yml /etc/litestream.yml
 COPY run.sh /usr/local/bin/run.sh
 
+
 EXPOSE ${UPTIME_KUMA_PORT}
 
 CMD [ "/usr/local/bin/run.sh" ]
