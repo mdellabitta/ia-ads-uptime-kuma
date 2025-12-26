@@ -4,6 +4,6 @@ dbs:
   - path: /app/data/kuma.db
     replicas:
       - type: s3
-        bucket: "${LITESTREAM_BUCKET}"
+        bucket: "ia-ads-uptime-kuma-db"
         retention: 72h
         snapshot-interval: 1h
